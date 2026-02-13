@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Airflow runtime 
+airflow/logs/
+airflow/plugins/__pycache__/
+airflow/airflow.db
+airflow/*.pid
+airflow/*.log
+
+# Docker
+*.log
+*.sqlite
+*.db
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.json
+
+# Data files (dataset GitHub'a konmaz)
+data/*.csv
