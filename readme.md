@@ -46,29 +46,33 @@ analytics.store_sales_summary
 - SQL (Analytics queries)
 - ETL Pipeline Architecture
 
+
 ## Project Structure
+
+```bash
 sales-etl-pipeline/
 │
 ├── airflow/
 │   ├── dags/
 │   │   └── sales_etl_dag.py        # Airflow pipeline definition
 │   ├── logs/                       # Airflow execution logs
-│   ├── plugins/
-│   └── docker-compose.yaml         # Airflow services (webserver, scheduler, postgres)
+│   └── plugins/
 │
 ├── scripts/
 │   ├── extract.py                  # Reads raw CSV
 │   ├── transform.py                # Cleans & standardizes data
-│   ├── load_bigquery.py            # Loads data to BigQuery
+│   └── load_bq.py                  # Loads data to BigQuery
 │
 ├── data/
-│   ├── Walmart_Sales.csv           # Raw dataset
-│   └── clean_walmart_sales.csv     # Cleaned dataset
+│   └── walmart_sales.csv           # Raw dataset
 │
 ├── keys/
 │   └── gcp_credentials.json        # Service account credentials
 │
+├── docker-compose.yaml             # Airflow services
 └── README.md
+```
+
 
 
 ##  Pipeline Workflow
